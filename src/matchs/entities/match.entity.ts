@@ -8,7 +8,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity()
+@Entity({ name: 'matchs' })
 export class Match {
   @PrimaryGeneratedColumn()
   id: number;
