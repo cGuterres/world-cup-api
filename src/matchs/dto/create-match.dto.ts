@@ -1,1 +1,9 @@
-export class CreateMatchDto {}
+export class CreateMatchDto {
+  groupId: number;
+  homeTeamId: number;
+  awayTeamId: number;
+  matchDate: Date;
+  location: string;
+  scoreHomeTeam?: number;
+  scoreAwayTeam?: number;
+}

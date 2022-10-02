@@ -40,7 +40,7 @@ export class Match {
 
   @OneToOne(() => Team)
   @JoinColumn()
-  HomeTeam: Team;
+  homeTeam: Team;
 
   @OneToOne(() => Team)
   @JoinColumn()
