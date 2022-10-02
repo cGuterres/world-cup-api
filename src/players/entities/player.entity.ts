@@ -16,6 +16,9 @@ export class Player {
   shirtNumber: number;
 
   @Column()
+  img: string;
+
+  @Column()
   birthDate: Date;
 
   @ManyToOne(() => Team, (team) => team.players)

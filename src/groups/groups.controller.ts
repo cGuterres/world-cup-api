@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { GroupsService } from './groups.service';
 import { CreateGroupDto } from './dto/create-group.dto';

@@ -28,11 +28,11 @@ export class Match {
   @Column()
   location: string;
 
-  @Column()
-  scoreHomeTeam: number;
+  @Column({ default: null })
+  scoreHomeTeam?: number;
 
-  @Column()
-  scoreAwayTeam: number;
+  @Column({ default: null })
+  scoreAwayTeam?: number;
 
   @OneToOne(() => Group)
   @JoinColumn()
