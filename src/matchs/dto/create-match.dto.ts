@@ -6,4 +6,5 @@ export class CreateMatchDto {
   location: string;
   scoreHomeTeam?: number;
   scoreAwayTeam?: number;
+  round?: number;
 }

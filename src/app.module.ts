@@ -27,6 +27,7 @@ import { Team } from './teams/entities/team.entity';
       entities: [Group, Match, Player, Team],
       synchronize: true,
       migrations: ['./src/typeorm/migrations'],
+      logging: true,
     }),
   ],
   controllers: [AppController],

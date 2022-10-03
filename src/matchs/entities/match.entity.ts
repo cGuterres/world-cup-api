@@ -4,10 +4,9 @@ import {
   Column,
   Entity,
   JoinColumn,
-  OneToOne,
+  ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-
 @Entity({ name: 'matchs' })
 export class Match {
   @PrimaryGeneratedColumn()
@@ -34,15 +33,18 @@ export class Match {
   @Column({ default: null })
   scoreAwayTeam?: number;
 
-  @OneToOne(() => Group)
+  @Column({ default: null })
+  round?: number;
+
+  @ManyToOne(() => Group)
   @JoinColumn()
   group: Group;
 
-  @OneToOne(() => Team)
+  @ManyToOne(() => Team)
   @JoinColumn()
   homeTeam: Team;
 
-  @OneToOne(() => Team)
+  @ManyToOne(() => Team)
   @JoinColumn()
   awayTeam: Team;
 }

@@ -17,7 +17,9 @@ export class MatchsService {
   }
 
   async findAll(): Promise<Match[]> {
-    return await this.matchRepository.find();
+    return await this.matchRepository.find({
+      relations: ['group', 'homeTeam', 'awayTeam'],
+    });
   }
 
   async findOne(id: number): Promise<Match> {
